@@ -159,4 +159,6 @@ Agentic AI credit platform with specialized agents for eligibility, analysis, ri
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&amp;color=gradient&amp;customColorList=12,14,16,18,20&amp;height=100&amp;section=footer"/>
 
+<!-- profile -->
+
 
