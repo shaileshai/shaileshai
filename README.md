@@ -1,164 +1,146 @@
+<!-- ====================== HEADER ====================== -->
 <div align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&amp;color=gradient&amp;customColorList=12,14,16,18,20&amp;height=180&amp;section=header&amp;text=Shailesh%20Tripathi&amp;fontSize=42&amp;fontColor=ffffff&amp;animation=fadeIn&amp;fontAlignY=32&amp;desc=Full%20Stack%20Engineer%20%7C%20AI%20%2B%20Data%20Platforms&amp;descSize=16&amp;descAlignY=52&amp;descAlign=50"/>
+<!-- Animated waving banner -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:6C8EBF,50:4B6BFB,100:29B5E8&height=210&section=header&text=Shailesh%20Tripathi&fontSize=52&fontColor=ffffff&animation=fadeIn&fontAlignY=36&desc=AI%20Solutions%20Architect%20%C2%B7%20Agentic%20Systems%20%C2%B7%20Applied%20Research&descAlignY=58&descSize=18&descAlignX=50" width="100%" alt="Shailesh Tripathi — AI Solutions Architect" />
 
-<br/>
+<a href="https://github.com/shaileshai"><img src="https://komarev.com/ghpvc/?username=shaileshai&label=Profile%20views&color=4B6BFB&style=flat" alt="Profile views" /></a>
 
-<a href="https://github.com/shaileshai">
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;weight=500&amp;size=22&amp;duration=3000&amp;pause=1000&amp;color=6366F1&amp;center=true&amp;vCenter=true&amp;width=600&amp;height=50&amp;lines=Building+AI-powered+data+platforms;Full+stack+%E2%80%94+Python+%2B+TypeScript+%2B+React;Turning+messy+data+into+clear+decisions" alt="Typing SVG" />
+<a href="https://shaileshtripathi.netlify.app">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=26&duration=3200&pause=900&color=6C8EBF&center=true&vCenter=true&width=820&lines=AI+Solutions+Architect;Agentic+Systems+%7C+Applied+Research+%7C+Data+Platforms;I+design+AI+systems+that+ship+%E2%80%94+and+I+measure+them." alt="Shailesh Tripathi — AI Solutions Architect" />
 </a>
+
+I architect production AI systems end-to-end — from retrieval and agent orchestration down to the token economics — and I publish the results with statistical rigor. ~10 years across BI/data consulting, full-stack engineering, and applied AI.
+
+<a href="https://www.linkedin.com/in/shaileshtripathi003/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+<a href="https://shaileshtripathi.netlify.app"><img src="https://img.shields.io/badge/Portfolio-1a1a2e?style=for-the-badge&logo=firefox&logoColor=white" alt="Portfolio" /></a>
+<a href="https://zenodo.org/records/19477107"><img src="https://img.shields.io/badge/Published_Research-Zenodo-4B6BFB?style=for-the-badge&logo=zenodo&logoColor=white" alt="Research" /></a>
+<a href="mailto:shaileshtripathi003@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
 
 </div>
 
-<br/>
+---
 
-## About Me
+## 🎯 What I Do
 
-I build **AI-powered platforms** that solve real data and workflow problems — from enterprise developer automation to intelligent data integration. My work sits at the intersection of full-stack engineering and applied AI, with a focus on shipping products that are production-ready, not just prototypes.
+I sit at the intersection of **AI research and production engineering** — the seam where most AI initiatives stall. My focus:
 
-- Currently building **[Vesh Agents](https://github.com/shaileshai/vesh-agents)** — an open-source agentic framework for revenue intelligence
-- Background in **BI consulting**, full-stack development, and AI/ML integration
-- I care about clean architecture, developer experience, and making complex systems feel simple
+- **Agentic architecture** — multi-agent orchestration, tool/function calling, MCP (Model Context Protocol), and the retrieval layers that make agents reliable at scale.
+- **LLM systems economics** — treating tokens, latency, and context as first-class architectural constraints. My research quantifies these tradeoffs instead of hand-waving them.
+- **Data platforms** — lakehouse and warehouse-native AI (Databricks, Snowflake), pipeline automation, and knowledge-graph-backed context.
+- **From PoC to production** — the unglamorous 80%: evaluation harnesses, A/B experimentation, observability, and cost governance that turn a demo into a system a business can trust.
 
-<br/>
+> I don't ship claims I can't measure. Two of my systems below are backed by controlled experiments with reported effect sizes and p-values.
 
-## Tech Stack
+---
 
-**Languages & Frameworks**
+## 📄 Published Research
 
+Peer-reviewable preprints on LLM agent efficiency and self-improving retrieval systems. Both introduce novel, empirically-validated architectures.
+
+### Karna: Reducing LLM Coding-Agent Token Consumption by 58% via Persistent Code Knowledge Graphs
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.19433427-4B6BFB?style=flat-square&logo=doi)](https://zenodo.org/records/19433427)
+
+A persistent **code knowledge graph** that delivers structured codebase context to AI agents over **MCP**, replacing brute-force file reads.
+- **57.9% input-token savings** over a file-reading baseline in a controlled A/B experiment on a **1,125-file codebase** (Claude Sonnet 4).
+- Statistically decisive: **p < 0.007, Cohen's d = 2.96** (a very large effect size).
+- Formalizes the **"conversation-history tax"** — the *O(T²)* growth in cumulative input tokens as agent turn-count rises — a cost driver that affects every tool-augmented LLM system.
+
+### Self-Evolving Context Layers: Implicit Learning from Agent Behavior in Code Knowledge Graphs
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.19477107-4B6BFB?style=flat-square&logo=doi)](https://zenodo.org/records/19477107)
+
+A three-loop **self-improvement system** built on Karna that learns from how agents actually use context — no manual tuning.
+- Introduces **"gap signals"**: implicit metrics derived from the discrepancy between what a context tool *returns* and what the agent *uses*.
+- Validated across **70 live agent sessions** (A/B, Claude Sonnet 4 via Cursor Agent CLI): the adaptive system produced **79.3% more exploratory tool calls** (p = 0.010) and surfaced **46.4% more relevant entities per session**.
+
+<sub>📚 Full author profile & citations → **[Zenodo](https://zenodo.org/search?q=Tripathi%2C%20Shailesh)** &nbsp;·&nbsp; 💻 Reference implementation → **[karna-ai](https://github.com/shaileshai/karna-ai)**</sub>
+
+---
+
+## 🏗️ Selected Systems
+
+Architecture and engineering I've led — from open-source frameworks to enterprise platforms.
+
+| System | What it is | Architecture highlights |
+|---|---|---|
+| **[Karna](https://github.com/shaileshai/karna-ai)** 🔬 | Persistent code knowledge graph for LLM agents (MCP server) | Entity resolution · graph-backed retrieval · 58% token reduction (peer-reviewed) |
+| **[Zeus](https://github.com/shaileshai/zeus)** ⚡ | Autonomous data-foundation agent | Provisions **Fivetran → BigQuery** pipelines under **human-in-the-loop** approval |
+| **Vesh Agents** 🤖 | Open-source agentic framework (Apache 2.0, `pip install vesh-agents`) | 6-agent orchestration for revenue intelligence · pluggable tools |
+| **Vesh AI Platform** 📊 | Managed intelligence layer for enterprise revenue teams | Multi-tenant · retrieval + agents over business data |
+| **Odin AI · CodeOps** 🛠️ | Enterprise developer-automation & CI/CD intelligence | Agentic workflows over engineering systems |
+| **DataGuardian AI** 🛡️ | AI-powered data-quality management | Anomaly detection · governance at the warehouse layer |
+| **CreditIntel.AI** 💳 | Multi-agent AI credit-scoring system | Explainable, agent-orchestrated decisioning |
+
+<sub>Several enterprise systems live in private repos — happy to walk through architecture and tradeoffs in conversation.</sub>
+
+---
+
+## 🧰 Architecture & Platform Stack
+
+**AI / LLM Systems**
+<br>
+![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white)
+![MCP](https://img.shields.io/badge/Model_Context_Protocol-000000?style=flat-square&logo=anthropic&logoColor=white)
+![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white)
+![Anthropic](https://img.shields.io/badge/Claude-D97757?style=flat-square&logo=anthropic&logoColor=white)
+![RAG](https://img.shields.io/badge/RAG_%26_Vector_Search-5A67D8?style=flat-square)
+![Agents](https://img.shields.io/badge/Multi--Agent_Orchestration-6C8EBF?style=flat-square)
+
+**Cloud & Data Platforms**
+<br>
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white)
+![Azure](https://img.shields.io/badge/Azure-0078D4?style=flat-square&logo=microsoftazure&logoColor=white)
+![Databricks](https://img.shields.io/badge/Databricks-FF3621?style=flat-square&logo=databricks&logoColor=white)
+![Snowflake](https://img.shields.io/badge/Snowflake-29B5E8?style=flat-square&logo=snowflake&logoColor=white)
+![BigQuery](https://img.shields.io/badge/BigQuery-4285F4?style=flat-square&logo=googlebigquery&logoColor=white)
+![Fivetran](https://img.shields.io/badge/Fivetran-1A73E8?style=flat-square)
+
+**Engineering**
+<br>
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white)
-
-**Frontend**
-
-![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)
-![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=flat-square&logo=framer&logoColor=white)
-
-**Backend & Data**
-
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white)
-![Celery](https://img.shields.io/badge/Celery-37814A?style=flat-square&logo=celery&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
-
-**DevOps & AI**
-
+![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=github-actions&logoColor=white)
-![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)
-
-<br/>
-
-## Featured Projects
-
-### [Vesh Agents](https://github.com/shaileshai/vesh-agents) &nbsp; [![PyPI](https://img.shields.io/pypi/v/vesh-agents?color=blue&label=PyPI)](https://pypi.org/project/vesh-agents/) [![Downloads](https://img.shields.io/pypi/dm/vesh-agents?color=green&label=Downloads)](https://pypi.org/project/vesh-agents/) [![Stars](https://img.shields.io/github/stars/shaileshai/vesh-agents?style=social)](https://github.com/shaileshai/vesh-agents)
-**Open-source agentic framework for revenue intelligence**
-6 AI agents that extract, resolve, compute, detect, and explain your business data. Built on OpenAI Agents SDK with BYOM (Bring Your Own Model) — use Claude, DeepSeek, GPT, or any LLM. Includes CLI, MCP server, entity resolution, and SaaS metric computation.
-
-`OpenAI Agents SDK` `LiteLLM` `Click` `Rich` `MCP` `Apache 2.0`
-
-```bash
-pip install vesh-agents
-vesh analyze csv revenue.csv
-```
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
+![Celery](https://img.shields.io/badge/Celery-37814A?style=flat-square&logo=celery&logoColor=white)
 
 ---
 
-### Vesh AI Platform
-**Managed intelligence layer for enterprise revenue teams**
-The commercial platform built on Vesh Agents — connects to Stripe, Postgres, HubSpot, resolves entities across sources, and delivers daily revenue insights to Slack. Agent Console dashboard, automated pipelines, cross-company benchmarks.
-
-[Live Demo](https://vesh-ai.netlify.app) &nbsp;|&nbsp; `Next.js 16` `FastAPI` `Celery` `PostgreSQL` `Redis` `Docker` `Prometheus` `Grafana`
-
----
-
-> The following projects are in private repositories:
-
-### Odin AI
-**Enterprise developer automation platform**
-AI-powered orchestration for software teams — multi-model code generation, real-time CI/CD monitoring, automated testing, and data migration. Integrates with GitLab, GitHub, and JIRA.
-
-`React` `TypeScript` `FastAPI` `PostgreSQL` `Monaco Editor` `Docker`
-
----
-
-### CodeOps
-**CI/CD and developer workflow automation**
-Enterprise platform with command centers for operations monitoring, solution design, AI-assisted development, and automated testing. Streamlines the full software delivery lifecycle.
-
-`React` `TypeScript` `Node.js` `GitLab API` `JIRA API` `Docker`
-
----
-
-### Apollo AI
-**Full-stack SaaS platform for telecom ISPs**
-Comprehensive BSS dashboard with 36+ report types, Customer 360, order management, billing, product catalog, and inventory. Includes AI chatbot, gamification, and command palette.
-
-`Next.js 16` `React 19` `TypeScript` `Tailwind CSS 4` `Zustand` `Framer Motion` `GSAP`
-
----
-
-### DataGuardian AI
-**AI-powered data quality management**
-Platform for automated data profiling, validation rule creation, anomaly detection, and quality scoring. Real-time monitoring with customizable reporting.
-
-`React` `TypeScript` `Machine Learning` `Data Validation`
-
----
-
-### CreditIntel.AI
-**AI-powered credit scoring with multi-agent system**
-Agentic AI credit platform with specialized agents for eligibility, analysis, risk assessment, and recommendations. Interactive dashboard with real-time scoring demos.
-
-`Next.js` `TypeScript` `GenKit` `Multi-Agent AI` `Fintech`
-
-<br/>
-
-## GitHub Analytics
+## 📈 GitHub Activity
 
 <div align="center">
 
-<a href="https://github.com/shaileshai">
-<img width="55%" src="https://github-readme-stats-sigma-five.vercel.app/api?username=shaileshai&amp;show_icons=true&amp;theme=tokyonight&amp;hide_border=true&amp;bg_color=1a1b27&amp;title_color=70a5fd&amp;icon_color=bf91f3&amp;text_color=38bdae" alt="GitHub Stats"/>
-</a>
+<img height="165" src="https://github-readme-stats.vercel.app/api?username=shaileshai&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true" alt="GitHub Stats" />
+<img height="165" src="https://github-readme-streak-stats.herokuapp.com/?user=shaileshai&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
 
-<br/><br/>
+<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=shaileshai&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" alt="Top Languages" />
 
-<img width="40%" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=shaileshai&amp;layout=compact&amp;theme=tokyonight&amp;hide_border=true&amp;bg_color=1a1b27&amp;title_color=70a5fd&amp;text_color=38bdae&amp;langs_count=8" alt="Top Languages"/>
+<!-- Animated contribution activity graph -->
+<img width="98%" src="https://github-readme-activity-graph.vercel.app/graph?username=shaileshai&theme=tokyo-night&hide_border=true&area=true&custom_title=Contribution%20Activity" alt="Activity Graph" />
 
-<br/><br/>
+<!-- Animated contribution snake (generated by the workflow in .github/workflows) -->
+<img width="98%" src="https://raw.githubusercontent.com/shaileshai/shaileshai/output/snake-dark.svg" alt="Contribution Snake" />
 
-<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=shaileshai&amp;bg_color=1a1b27&amp;color=70a5fd&amp;line=bf91f3&amp;point=ff9e64&amp;area=true&amp;area_color=70a5fd&amp;hide_border=true" alt="Activity Graph"/>
+<!-- Profile trophies -->
+<img src="https://github-profile-trophy.vercel.app/?username=shaileshai&theme=tokyonight&no-frame=true&no-bg=true&margin-w=4&row=1&column=7" alt="Trophies" />
 
 </div>
 
-<br/>
-
-## Let's Connect
+---
 
 <div align="center">
 
-<a href="https://www.linkedin.com/in/shaileshtripathi003/">
-<img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&amp;logo=linkedin&amp;logoColor=white" alt="LinkedIn"/>
-</a>
-&nbsp;
-<a href="https://github.com/shaileshai">
-<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="GitHub"/>
-</a>
+### 🤝 Let's build the next generation of AI systems
+
+I'm exploring **AI Solutions Architect** roles where research-grade thinking meets production scale.
+
+<a href="https://www.linkedin.com/in/shaileshtripathi003/"><img src="https://img.shields.io/badge/Connect_on_LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+<a href="https://shaileshtripathi.netlify.app"><img src="https://img.shields.io/badge/View_Portfolio-1a1a2e?style=for-the-badge&logo=firefox&logoColor=white" alt="Portfolio" /></a>
+
+<sub><i>Architecture is the art of measurable tradeoffs. I bring the receipts.</i></sub>
 
 </div>
 
-<br/>
-
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&amp;color=gradient&amp;customColorList=12,14,16,18,20&amp;height=100&amp;section=footer"/>
-
-<!-- profile -->
-
-
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:29B5E8,50:4B6BFB,100:6C8EBF&height=120&section=footer" width="100%" alt="" />
